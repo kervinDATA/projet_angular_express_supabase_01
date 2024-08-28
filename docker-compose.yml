@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: ./backend_app  # Spécifie le chemin vers backend_app
+      dockerfile: Dockerfile  # Indique le nom du Dockerfile
+    ports:
+      - "3000:3000"
+
