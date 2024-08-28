@@ -1,0 +1,25 @@
+<div class="listing-container">
+  <a [routerLink]="['/add-listing']">Ajouter un nouveau listing</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Quartier</th>
+        <th>Type de chambre</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let listing of listings">
+        <td>
+          <a [routerLink]="['/listing', listing.listing_id]">{{ listing.host_name }}</a>
+        </td>
+        <td>{{ listing.area }}</td>
+        <td>{{ listing.room_type }}</td>
+        <td>{{ listing.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
